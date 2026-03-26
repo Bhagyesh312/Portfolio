@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagyesh Shah — AI Developer & Full-Stack Engineer</title>
+    <meta name="description" content="Portfolio of Bhagyesh Shah — B.Tech CSE (AI-ML) student at Adani University. AI developer, Machine Learning enthusiast, and full-stack web engineer.">
+    <meta name="keywords" content="Bhagyesh Shah, AI Developer, Machine Learning, Full-Stack Developer, Portfolio, Adani University, Python Developer">
+    <meta name="author" content="Bhagyesh Shah">
+    <meta property="og:title" content="Bhagyesh Shah — Portfolio">
+    <meta property="og:description" content="AI Developer & Full-Stack Engineer building data-driven applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bhagyesh312.github.io/">
+    <meta property="og:image" content="assets/media/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bhagyesh Shah — Portfolio">
+    <meta name="twitter:description" content="AI Developer & Full-Stack Engineer building data-driven applications.">
+    <meta name="twitter:image" content="assets/media/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- dotLottie Player (Modern & Stable) -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- Umami Analytics (Privacy-friendly) -->
+    <script async defer data-website-id="7249cc4a-8199-4b47-aae0-a17345be5235" src="https://analytics.umami.is/script.js"></script>
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="pageTransition">
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <dotlottie-player src="assets/animations/Data Breach.json" background="transparent" speed="1.5" loop autoplay></dotlottie-player>
+            <span class="loader-text">BS</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" id="logoNavbar">
+                <img src="assets/media/image2.jpeg" alt="Bhagyesh Shah" class="nav-logo-img">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-extra">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="mailto:bhagyeshshah037@gmail.com" class="nav-cta">Let's Talk</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Background Elements -->
+    <div class="bg-blobs">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+        <div class="blob-3"></div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-lottie-container" data-aos="zoom-in" data-aos-duration="1500">
+            <dotlottie-player src="https://lottie.host/62b8773e-396a-4841-8f3e-48a0a4c2a4f4/6yA9L8WnC.json" background="transparent" speed="0.8" loop autoplay></dotlottie-player>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                <i class="fas fa-circle status-dot"></i>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                Hi, I'm <span class="gradient-text">Bhagyesh Shah</span>
+            </h1>
+            <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+                <span class="typing-wrapper">
+                    <span id="typedText"></span><span class="typing-cursor">|</span>
+                </span>
+            </div>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="800">
+                B.Tech CSE (AI-ML) Student at Adani University — crafting intelligent systems, 
+                scalable web platforms, and data-driven solutions.
+            </p>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="1200">
+                <div class="stat-item">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                    </div>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="7.7">0</span>
+                    </div>
+                    <span class="stat-label">CGPA</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> Get to Know Me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-lottie" data-aos="fade-right">
+                    <dotlottie-player src="assets/animations/Machinery Production.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                <h3 class="about-heading">Machine Learning Enthusiast &<br>Full-Stack Developer</h3>
+                <p class="about-text">
+                    I'm a passionate B.Tech CSE (AI & ML) student at <strong>Adani University, Ahmedabad</strong>,
+                    with a deep interest in building data-driven applications and intelligent systems.
+                    Skilled in <strong>Python, Node.js, and Cloud Computing</strong>, I love turning
+                    complex problems into elegant, scalable solutions.
+                </p>
+                <p class="about-text">
+                    From developing a <strong>real-time sophisticated Chatroom platform</strong> using Socket.io to 
+                    an <strong>AI-powered healthcare assistant</strong>, I thrive on projects that merge cutting-edge
+                    technology with real-world impact. My approach combines analytical thinking, clean code
+                    practices, and a relentless curiosity for innovation.
+                </p>
+                <div class="about-info-grid">
+                    <div class="about-info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <span class="info-label">Education</span>
+                            <span class="info-value">B.Tech CSE (AI & ML)</span>
+                        </div>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <span class="info-label">University</span>
+                            <span class="info-value">Adani University</span>
+                        </div>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Ahmedabad, India</span>
+                        </div>
+                    </div>
+                    <div class="about-info-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <span class="info-label">CGPA</span>
+                            <span class="info-value">7.70 / 10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-actions reveal-up">
+                    <a href="assets/media/Resume(N).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <button id="resumePreviewBtn" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> Quick View
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-cogs"></i> My Expertise</span>
+                <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-info">
+                                <span>C</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category reveal-up" style="--delay: 0.1s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-info">
+                                <span>HTML / CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span>Node.js / Socket.io</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-info">
+                                <span>PostgreSQL / SQLite</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI / ML -->
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI / Machine Learning</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span>Supervised Learning</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span>Pandas / NumPy</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-info">
+                                <span>Scikit-learn</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category reveal-up" style="--delay: 0.3s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span>Git / GitHub</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span>AWS / Cloud Computing</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span>REST APIs / JWT</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-folder-open"></i> My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project: Real-time Chatroom -->
+                <div class="project-card" data-category="web" data-project-id="chatroom" data-aos="fade-up">
+                    <div class="project-image trigger-project-modal">
+                        <div class="project-image-placeholder chat-gradient">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link-btn trigger-project-modal" title="View Case Study"><i class="fas fa-search-plus"></i></button>
+                                <a href="https://github.com/Bhagyesh312/Chatroom" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info trigger-project-modal">
+                        <span class="project-year">2026</span>
+                        <h3 class="project-title">Real-time Chatroom</h3>
+                        <p class="project-desc">Full-featured platform with private DMs, dynamic rooms, typing indicators, and message reactions. Secured with bcrypt & JSONB persistence.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Socket.io</span>
+                            <span>PostgreSQL</span>
+                            <span>Express</span>
+                            <span>bcrypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1: BookSwap-HUB -->
+                <div class="project-card reveal-up" data-category="web" data-project-id="bookswap" style="--delay: 0.1s">
+                    <div class="project-image trigger-project-modal">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link-btn trigger-project-modal" title="View Case Study"><i class="fas fa-search-plus"></i></button>
+                                <a href="https://github.com/Bhagyesh312/BookSwap-HUB" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info trigger-project-modal">
+                        <span class="project-year">2026</span>
+                        <h3 class="project-title">BookSwap-HUB</h3>
+                        <p class="project-desc">Community marketplace for local book enthusiasts. Features inventory management, user listings, and localized swap requests.</p>
+                        <div class="project-tech">
+                            <span>Flask</span>
+                            <span>PostgreSQL</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: MediScan-AI -->
+                <div class="project-card reveal-up" data-category="ai" data-project-id="mediscan" style="--delay: 0.2s">
+                    <div class="project-image trigger-project-modal">
+                        <div class="project-image-placeholder ai-gradient">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link-btn trigger-project-modal" title="View Case Study"><i class="fas fa-search-plus"></i></button>
+                                <a href="https://github.com/Bhagyesh312/MediScan-AI" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info trigger-project-modal">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">MediScan-AI</h3>
+                        <p class="project-desc">Machine Learning diagnostic tool utilizing Random Forest Classifier to predict potential diseases based on real-time symptom processing.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Human Following Car Robot -->
+                <div class="project-card reveal-up" data-category="iot" data-project-id="robot" style="--delay: 0.3s">
+                    <div class="project-image trigger-project-modal">
+                        <div class="project-image-placeholder iot-gradient">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link-btn trigger-project-modal" title="View Case Study"><i class="fas fa-search-plus"></i></button>
+                                <a href="https://github.com/Bhagyesh312" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info trigger-project-modal">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">Human Following Car Robot</h3>
+                        <p class="project-desc">Autonomous IoT robot using Arduino and sensor array for real-time human detection, tracking, and personal assistance applications.</p>
+                        <div class="project-tech">
+                            <span>Arduino</span>
+                            <span>Ultrasonic Sensor</span>
+                            <span>IR Sensors</span>
+                            <span>Motor Driver</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Activity Widget -->
+            <div class="github-stats reveal-up">
+                <h3>GitHub <span class="gradient-text">Activity</span></h3>
+                <div class="stats-cards">
+                    <a href="https://github.com/Bhagyesh312" target="_blank" rel="noopener noreferrer">
+                        <img src="https://github-readme-stats.vercel.app/api?username=Bhagyesh312&show_icons=true&theme=transparent&hide_border=true&title_color=6c63ff&text_color=a0a0b8&icon_color=6c63ff&bg_color=00000000" alt="GitHub Stats" loading="lazy">
+                    </a>
+                    <a href="https://github.com/Bhagyesh312" target="_blank" rel="noopener noreferrer">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bhagyesh312&layout=compact&theme=transparent&hide_border=true&title_color=a855f7&text_color=a0a0b8&bg_color=00000000" alt="Top Languages" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Achievements Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-trophy"></i> Milestones</span>
+                <h2 class="section-title">Experience & <span class="gradient-text">Achievements</span></h2>
+            </div>
+            <div class="timeline">
+                <!-- Education -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Education</div>
+                        <span class="timeline-date">July 2023 — August 2027</span>
+                        <h3>B.Tech — Computer Science Engineering (AI & ML)</h3>
+                        <h4>Adani University, Ahmedabad</h4>
+                        <p>Specializing in Artificial Intelligence and Machine Learning with a strong foundation in Data Structures, Algorithms, and Software Engineering. CGPA: 7.70/10</p>
+                    </div>
+                </div>
+
+                <!-- Certification 1: Anthropic -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">March 2026</span>
+                        <h3>AI Fluency for Students</h3>
+                        <h4>Anthropic</h4>
+                        <p>Mastered AI concepts, prompt engineering, and responsible AI usage through Anthropic's official student program.</p>
+                        <a href="https://verify.skilljar.com/c/vw6dhxtxyrz4" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 2: Jira -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">March 2026</span>
+                        <h3>Get started with Jira</h3>
+                        <h4>Coursera / Atlassian</h4>
+                        <p>Proficient in agile project management, issue tracking, and workflow optimization using Jira Software.</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/VPCCJ7OKGNQY" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 3: Cognitive Class -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">January 2026</span>
+                        <h3>Prompt Engineering for Everyone</h3>
+                        <h4>Cognitive Class / IBM</h4>
+                        <p>Advanced techniques for designing effective prompts for LLMs to achieve high-quality AI-generated results.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/318501618b154da689345e6e2d28c788" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 4: FutureSkills Prime -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">January 2026</span>
+                        <h3>Yuva AI for All</h3>
+                        <h4>FutureSkills Prime — NASSCOM</h4>
+                        <p>Validated foundational knowledge in Artificial Intelligence and its real-world societal impacts.</p>
+                    </div>
+                </div>
+
+                <!-- Certification 5: AWS Cloud -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">November 2025</span>
+                        <h3>AWS Academy Graduate — Cloud Foundation</h3>
+                        <h4>Amazon Web Services (AWS)</h4>
+                        <p>Certified in AWS cloud architecture, core services, security, and global infrastructure management.</p>
+                        <a href="https://www.credly.com/badges/fa390bcd-5702-452a-868d-a4db82389628/public_url" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 6: AWS ML -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge achievement">Certification</div>
+                        <span class="timeline-date">June 2025</span>
+                        <h3>AWS Academy Graduate — Machine Learning Foundations</h3>
+                        <h4>Amazon Web Services (AWS)</h4>
+                        <p>Mastered foundational machine learning concepts and AWS ML services including SageMaker and data pipelines.</p>
+                        <a href="https://www.credly.com/badges/77c8b015-aee4-433a-a1fa-578d2d178ba7/print" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                            <i class="fas fa-external-link-alt"></i> Verify Credential
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Get in Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Have a project idea or want to collaborate? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-info-card">
+                        <div class="contact-lottie">
+                            <dotlottie-player src="assets/animations/Mailbox.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                        </div>
+                        <h3>Let's <span class="gradient-text">Connect</span></h3>
+                        <p>Feel free to reach out for collaborations, project inquiries, or just a friendly chat about tech, AI, and building amazing things.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <span>Email</span>
+                                    <a href="mailto:bhagyeshshah037@gmail.com">bhagyeshshah037@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <span>Phone</span>
+                                    <a href="tel:+919409715902">+91 94097 15902</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <span>Location</span>
+                                    <p>Ahmedabad, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Bhagyesh312" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bhagyesh-shah-a68876288/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:bhagyeshshah037@gmail.com" class="social-link" aria-label="Email" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xbdznldy" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" required autocomplete="name">
+                            <label for="formName">Your Name</label>
+                            <div class="form-highlight"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" required autocomplete="email">
+                            <label for="formEmail">Your Email</label>
+                            <div class="form-highlight"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" rows="5" required></textarea>
+                            <label for="formMessage">Your Message</label>
+                            <div class="form-highlight"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project Case Study Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-glass-overlay"></div>
+        <div class="modal-content project-modal-content">
+            <button class="modal-close" id="closeProjectModal">&times;</button>
+            <div class="project-modal-grid">
+                <div class="project-modal-header">
+                    <div class="project-modal-badge" id="modalProjectYear">2026</div>
+                    <h2 id="modalProjectTitle">Project Title</h2>
+                    <div class="project-modal-tech" id="modalProjectTech">
+                        <!-- Dynamically filled -->
+                    </div>
+                </div>
+                <div class="project-modal-body">
+                    <div class="project-modal-section">
+                        <h3><i class="fas fa-bullseye"></i> Problem & Challenge</h3>
+                        <p id="modalProjectChallenge">Detailed challenge description goes here...</p>
+                    </div>
+                    <div class="project-modal-section">
+                        <h3><i class="fas fa-lightbulb"></i> Solution & Implementation</h3>
+                        <p id="modalProjectSolution">Detailed solution description goes here...</p>
+                    </div>
+                </div>
+                <div class="project-modal-footer">
+                    <a href="#" id="modalProjectLink" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Preview Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-glass-overlay"></div>
+        <div class="modal-content resume-modal-content">
+            <div class="resume-modal-header">
+                <h3>Resume <span class="gradient-text">Preview</span></h3>
+                <div class="resume-modal-actions">
+                    <a href="assets/media/Resume(N).pdf" target="_blank" class="full-view-link" title="Open in Full Page">
+                        <i class="fas fa-external-link-alt"></i> Full View
+                    </a>
+                    <button class="modal-close" id="closeResumeModal">&times;</button>
+                </div>
+            </div>
+            <div class="resume-viewer">
+                <iframe src="assets/media/Resume(N).pdf#toolbar=0" title="Resume Preview"></iframe>
+            </div>
+            <div class="resume-modal-footer">
+                <a href="assets/media/Resume(N).pdf" download class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-glass-overlay"></div>
+        <div class="modal-content">
+            <img id="modalImg" src="assets/media/image2.jpeg" alt="Full Preview">
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
