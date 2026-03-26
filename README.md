@@ -33,7 +33,7 @@ This site is designed for seamless deployment on **GitHub Pages**. For a full wa
 
 ## 👨‍💻 Developer
 **Bhagyesh Shah**
-- [LinkedIn](https://www.linkedin.com/in/bhagyesh312/)
+- [LinkedIn](https://www.linkedin.com/in/bhagyesh-shah-a68876288/)
 - [GitHub](https://github.com/bhagyesh312)
 - [Email](mailto:bhagyeshshah037@gmail.com)
 
