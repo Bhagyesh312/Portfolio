@@ -291,18 +291,6 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-
-                // Animate skill bars when skills section is visible
-                if (entry.target.classList.contains('skill-category')) {
-                    const fills = entry.target.querySelectorAll('.skill-fill');
-                    fills.forEach((fill, i) => {
-                        setTimeout(() => {
-                            fill.style.width = fill.dataset.width + '%';
-                            setTimeout(() => fill.classList.add('animated'), 1200);
-                        }, i * 150);
-                    });
-                }
-
                 observer.unobserve(entry.target);
             }
         });
@@ -603,6 +591,15 @@
        PROJECT CASE STUDY MODAL
        ======================================== */
     const projectData = {
+        voicesql: {
+            title: "VoiceSQL",
+            year: "2026",
+            tech: ["Python", "Flask", "Groq AI (Llama 3.3-70b)", "FAISS", "sentence-transformers", "Web Speech API", "Chart.js"],
+            challenge: "Enabling non-technical users to query structured data using natural language and voice, while ensuring SQL accuracy across diverse and unpredictable schemas.",
+            solution: "Built a RAG pipeline using FAISS and sentence-transformers to embed schema context and few-shot examples, injecting them into Groq's Llama 3.3-70b for accurate SQL generation. Added a rule-based fallback, read-only query enforcement, auto-generated charts, and a Web Speech API voice interface. Deployed on Hugging Face Spaces via Docker.",
+            link: "https://github.com/Bhagyesh312/VoiceSQL",
+            demo: "https://huggingface.co/spaces/BhagyeshShah11/VoiceSQL"
+        },
         chatroom: {
             title: "Real-time Chatroom",
             year: "2026",
