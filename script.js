@@ -51,7 +51,9 @@
     });
 
     function updateGithubStatsTheme(theme) {
+        // Reserved for future GitHub stats widget integration
         const statsImages = document.querySelectorAll('.stats-cards img');
+        if (!statsImages.length) return;
         statsImages.forEach(img => {
             let src = img.src;
             if (theme === 'light') {
@@ -95,10 +97,12 @@
         }
 
         // Back to top visibility
-        if (window.scrollY > 400) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        if (backToTop) {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         }
     }
 
@@ -135,9 +139,11 @@
     }
 
     // Back to top button
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     /* ========================================
        PAGE TRANSITIONS
@@ -164,6 +170,9 @@
     // Update smooth scroll to include transitions
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            // Skip modal action buttons — they have real external hrefs set dynamically
+            if (this.id === 'modalProjectLink' || this.id === 'modalProjectDemo') return;
+
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const target = document.querySelector(targetId);
@@ -205,11 +214,11 @@
        ======================================== */
     const typedTextEl = document.getElementById('typedText');
     const roles = [
-        'AI Developer',
-        'Full-Stack Web Developer',
+        'Aspiring AI/ML Engineer',
+        'Full-Stack Developer',
         'Machine Learning Engineer',
-        'Problem Solver',
-        'Python Enthusiast'
+        'Computer Vision Engineer',
+        'Python Developer'
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -353,6 +362,7 @@
        ======================================== */
     const contactForm = document.getElementById('contactForm');
 
+    if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -392,6 +402,7 @@
             }, 3000);
         }
     });
+    }
 
     /* ========================================
        PARTICLE CANVAS BACKGROUND
@@ -561,21 +572,25 @@
     const imageModal = document.getElementById('imageModal');
     const logoNavbar = document.getElementById('logoNavbar');
     const closeModal = document.getElementById('closeModal');
-    const modalGlassOverlay = document.querySelector('.modal-glass-overlay');
+    const imageModalOverlay = imageModal ? imageModal.querySelector('.modal-glass-overlay') : null;
 
     const openModalHandler = () => {
-        imageModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        if (imageModal) {
+            imageModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const closeHandler = () => {
-        imageModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        if (imageModal) {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     };
 
     if (logoNavbar) logoNavbar.addEventListener('click', openModalHandler);
     if (closeModal) closeModal.addEventListener('click', closeHandler);
-    if (modalGlassOverlay) modalGlassOverlay.addEventListener('click', closeHandler);
+    if (imageModalOverlay) imageModalOverlay.addEventListener('click', closeHandler);
 
     // Close on Escape key
     window.addEventListener('keydown', (e) => {
@@ -622,15 +637,40 @@
             tech: ["Python", "Flask", "Scikit-learn", "Pandas", "NumPy"],
             challenge: "Achieving high accuracy in disease prediction across diverse symptom profiles while maintaining a user-friendly, non-technical interface.",
             solution: "Engineered a robust Random Forest Classifier model trained on extensive medical datasets. Built a lightweight Flask API to serve predictions in real-time and a clean UI to make medical insights accessible to non-experts.",
-            link: "https://github.com/Bhagyesh312/MediScan-AI"
+            link: "https://github.com/Bhagyesh312/MediScan-AI",
+            demo: "https://mediscan-ai-yqdy.onrender.com/"
         },
         robot: {
             title: "Human Following Car Robot",
             year: "2025",
             tech: ["Arduino", "Ultrasonic Sensor", "IR Sensors", "Motor Driver"],
             challenge: "Implementing precise distance tracking and obstacle avoidance using limited hardware processing power.",
-            solution: "Programmed a real-time PID-like feedback loop in Arduino. Used an array of Ultrasonic and IR sensors to create a high-fidelity spatial map for stable human following behavior and proactive collision prevention.",
-            link: "https://github.com/Bhagyesh312"
+            solution: "Programmed a real-time PID-like feedback loop in Arduino. Used an array of Ultrasonic and IR sensors to create a high-fidelity spatial map for stable human following behavior and proactive collision prevention."
+        },
+        medeasy: {
+            title: "MedEasy",
+            year: "2026",
+            tech: ["React 19", "Vite", "Flask", "Groq AI (Llama 3.3-70b)", "PostgreSQL", "JWT", "ReportLab", "Gmail SMTP"],
+            challenge: "Making complex medical lab reports understandable to non-medical users, while supporting multiple languages and ensuring secure, authenticated access to sensitive health data.",
+            solution: "Built a full-stack app where users upload a lab PDF and Groq's Llama 3.3-70b extracts and explains every test value in plain language with colour-coded Normal/High/Low/Critical flags. Added AI-generated doctor questions, side-by-side report comparison, PDF export via ReportLab, and multilingual support (English, Hindi, Gujarati). Secured with JWT auth and email OTP verification. Deployed live on Render with a Neon PostgreSQL backend.",
+            link: "https://github.com/Bhagyesh312/MedEasy",
+            demo: "https://medeasy-dpe6.onrender.com"
+        },
+        handgesture: {
+            title: "Hand Gesture Recognition",
+            year: "2026",
+            tech: ["Python", "MediaPipe", "OpenCV", "Scikit-learn", "Random Forest", "pyautogui"],
+            challenge: "Achieving reliable real-time gesture classification from raw webcam frames with minimal latency, while keeping the system extensible for new gestures without retraining from scratch.",
+            solution: "Used MediaPipe to extract 21 hand landmarks (63 coordinates) per frame in real time. Trained a Random Forest classifier on the collected landmark data, with a clean data collection pipeline to add new gestures easily. Mapped recognized gestures to system actions — screenshots and browser control — via pyautogui, with a cooldown timer to prevent repeated triggers.",
+            link: "https://github.com/Bhagyesh312/HandGesture_model"
+        },
+        catdog: {
+            title: "Cat vs Dog Classifier",
+            year: "2026",
+            tech: ["Python", "SVM (RBF kernel)", "HOG", "OpenCV", "Scikit-learn", "joblib"],
+            challenge: "Building an accurate image classifier without deep learning, using classical computer vision techniques on a dataset where background clutter and image variation are significant noise sources.",
+            solution: "Implemented a full pipeline: images are resized to 128×128, converted to grayscale, and passed through HOG feature extraction to produce compact gradient-based feature vectors. Features are scaled with StandardScaler and fed into an SVM with an RBF kernel (C=10). The trained model and scaler are persisted with joblib for reuse. Achieved ~66% accuracy — a strong baseline for a classical SVM approach on this dataset.",
+            link: "https://github.com/Bhagyesh312/Cat-Dog_Clasifier"
         }
     };
 
@@ -652,7 +692,26 @@
                 document.getElementById('modalProjectYear').textContent = data.year;
                 document.getElementById('modalProjectChallenge').textContent = data.challenge;
                 document.getElementById('modalProjectSolution').textContent = data.solution;
-                document.getElementById('modalProjectLink').href = data.link;
+
+                // Source code button
+                const sourceBtn = document.getElementById('modalProjectLink');
+                if (data.link) {
+                    sourceBtn.href = data.link;
+                    sourceBtn.style.display = 'inline-flex';
+                } else {
+                    sourceBtn.style.display = 'none';
+                }
+
+                // Live demo button
+                const demoBtn = document.getElementById('modalProjectDemo');
+                if (demoBtn) {
+                    if (data.demo) {
+                        demoBtn.href = data.demo;
+                        demoBtn.style.display = 'inline-flex';
+                    } else {
+                        demoBtn.style.display = 'none';
+                    }
+                }
 
                 const techContainer = document.getElementById('modalProjectTech');
                 techContainer.innerHTML = '';

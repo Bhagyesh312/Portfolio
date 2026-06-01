@@ -9,11 +9,33 @@ desktop.ini
 *.swp
 *.swo
 
-# Project specific
+# Node / Package managers
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.cache/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+.logs/
+
+# AI / Agent tooling
 .gemini/
 .agent/
 .agents/
 .cortex/
-.logs/
-*.log
+.kiro/
+
+# Temporary files
+*.tmp
+*.temp

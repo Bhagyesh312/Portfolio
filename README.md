@@ -1,37 +1,83 @@
-## Live Demo : https://portfolio020bs.netlify.app/
+# Bhagyesh Shah — Portfolio
 
-# 🚀 Bhagyesh Shah — AI Developer & Full-Stack Portfolio
+**Live:** [https://portfolio020bs.netlify.app/](https://portfolio020bs.netlify.app/)
 
-Professional portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI-ML) student at Adani University. This site is designed to showcase high-fidelity AI/ML projects and scalable web applications with a focus on modern UI/UX and performance.
+Personal portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI & ML) student at Adani University, Ahmedabad. Built to showcase projects, internships, skills, and experience in AI/ML engineering and full-stack development.
 
-## ✨ Key Features
-- **Modern UI/UX**: Dark mode by default with a sleek glassmorphism design.
-- **Interactive Animations**: High-performance Lottie animations and AOS (Animate On Scroll) for a premium interactive feel.
-- **Responsive Design**: Fully optimized for mobile, tablet, and ultra-wide screens.
-- **Project Showcases**: Filterable project gallery with deep-dive modal case studies.
-- **Micro-Animations**: Custom particle backgrounds and interactive tech badges.
-- **Performance**: Zero external render-blocking assets (animations served locally for lightning speed).
+---
 
-## 🛠️ Tech Stack
-- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+).
-- **Interactivity**: dotLottie Player, Animate On Scroll (AOS).
-- **Aesthetics**: Google Fonts (Inter & JetBrains Mono), FontAwesome Icons.
-- **Deployment**: GitHub Pages.
+## Features
 
-## 📁 Project Structure
-```text
-/
+- **Dark / Light mode** — persisted via localStorage
+- **Animated hero** — particle canvas background + Lottie animation
+- **Typing effect** — rotating role titles in the hero
+- **Filterable project gallery** — filter by Web, AI/ML, IoT, NLP
+- **Project case study modals** — challenge, solution, tech stack, GitHub + Live Demo links
+- **Internship section** — CodSoft & CovalentX Technologies with certificate and repo links
+- **Certifications grid** — 6 verified certifications with verify links
+- **Resume preview modal** — inline PDF viewer + download
+- **Contact form** — powered by Formspree
+- **Scroll animations** — AOS (Animate On Scroll) + custom Intersection Observer
+- **Fully responsive** — mobile (320px+), tablet, and desktop
+
+---
+
+## Projects Showcased
+
+| Project | Category | Stack |
+|---|---|---|
+| VoiceSQL | NLP | Python, Flask, Groq AI, FAISS, Web Speech API |
+| MedEasy | AI | React, Flask, Groq AI, PostgreSQL, JWT |
+| Real-time Chatroom | Web | Node.js, Socket.io, PostgreSQL, Express |
+| MediScan-AI | AI/ML | Python, Flask, Scikit-learn, Pandas |
+| BookSwap-HUB | Web | Flask, PostgreSQL, HTML5, CSS3 |
+| Hand Gesture Recognition | AI/ML | Python, MediaPipe, OpenCV, Random Forest |
+| Cat vs Dog Classifier | AI/ML | Python, SVM, HOG, OpenCV, Scikit-learn |
+| Human Following Car Robot | IoT | Arduino, Ultrasonic Sensor, IR Sensors |
+
+---
+
+## Tech Stack
+
+- **Frontend:** HTML5, CSS3 (custom design system), JavaScript (ES6+)
+- **Animations:** dotLottie Player, AOS (Animate On Scroll)
+- **Fonts & Icons:** Google Fonts (Inter + JetBrains Mono), Font Awesome 6
+- **Form:** Formspree
+- **Analytics:** Umami (privacy-friendly)
+- **Deployment:** Netlify
+
+---
+
+## Project Structure
+
+```
+Portfolio/
 ├── assets/
-│   ├── animations/ (Local Lottie JSON assets)
-│   └── media/      (Resume, site logo, and OG images)
-├── index.html       (Main structure & Meta SEO)
-├── style.css       (Global design system & components)
-├── script.js       (Interactivity & state management)
-└── .gitignore       (Clean git history)
+│   ├── animations/          # Local Lottie JSON files
+│   └── media/               # Resume PDF, profile image, OG image
+├── index.html               # Main HTML — structure, SEO meta, all sections
+├── style.css                # Full design system, components, responsive breakpoints
+├── script.js                # All interactivity — modals, filters, animations, form
+├── .gitignore
+└── README.md
 ```
 
-## 👨‍💻 Developer
+---
+
+## Responsive Breakpoints
+
+| Breakpoint | Target |
+|---|---|
+| ≤1024px | Tablets, small laptops |
+| ≤768px | Large phones, portrait tablets |
+| ≤480px | Standard phones |
+| ≤360px | Small phones (Galaxy S series, etc.) |
+
+---
+
+## Contact
+
 **Bhagyesh Shah**
-- [LinkedIn](https://www.linkedin.com/in/bhagyesh-shah-a68876288/)
-- [GitHub](https://github.com/bhagyesh312)
-- [Email](mailto:bhagyeshshah037@gmail.com)
+- Email: [bhagyeshshah037@gmail.com](mailto:bhagyeshshah037@gmail.com)
+- LinkedIn: [bhagyesh-shah-a68876288](https://www.linkedin.com/in/bhagyesh-shah-a68876288/)
+- GitHub: [Bhagyesh312](https://github.com/Bhagyesh312)
