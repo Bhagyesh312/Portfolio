@@ -217,8 +217,9 @@
         'Aspiring AI/ML Engineer',
         'Full-Stack Developer',
         'Machine Learning Engineer',
-        'Computer Vision Engineer',
-        'Python Developer'
+        'Aspiring Data Analyst',
+        'Frontend Developer',
+        'IoT Developer'
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -671,6 +672,30 @@
             challenge: "Building an accurate image classifier without deep learning, using classical computer vision techniques on a dataset where background clutter and image variation are significant noise sources.",
             solution: "Implemented a full pipeline: images are resized to 128×128, converted to grayscale, and passed through HOG feature extraction to produce compact gradient-based feature vectors. Features are scaled with StandardScaler and fed into an SVM with an RBF kernel (C=10). The trained model and scaler are persisted with joblib for reuse. Achieved ~66% accuracy — a strong baseline for a classical SVM approach on this dataset.",
             link: "https://github.com/Bhagyesh312/Cat-Dog_Clasifier"
+        },
+        nids: {
+            title: "NIDS — Network Intrusion Detection System",
+            year: "2026",
+            tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebook"],
+            challenge: "Network traffic contains thousands of benign and malicious patterns that are highly imbalanced. Detecting intrusions accurately without overwhelming false positives requires careful feature engineering and model selection on benchmark datasets.",
+            solution: "Built a complete ML pipeline for network intrusion detection using the standard NSL-KDD / CICIDS benchmark dataset. Explored multiple classifiers (Random Forest, Decision Tree, KNN) with comparative evaluation. Included data preprocessing, label encoding, feature scaling, and thorough performance analysis using confusion matrices, accuracy, precision, recall, and F1-score visualised in Jupyter Notebook.",
+            link: "https://github.com/Bhagyesh312/NIDS"
+        },
+        retailiq: {
+            title: "RetailIQ — Retail Data Analysis",
+            year: "2026",
+            tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+            challenge: "Raw retail transaction data is messy and sprawling — identifying actionable sales trends, top-performing products, and customer behaviour patterns requires systematic exploration and clear visual storytelling.",
+            solution: "Performed end-to-end exploratory data analysis on a retail dataset covering sales, customer segments, and product categories. Cleaned and transformed raw data with Pandas, engineered time-based and categorical features, and generated a rich set of visualisations (bar charts, heatmaps, trend lines) using Matplotlib and Seaborn to surface actionable business insights.",
+            link: "https://github.com/Bhagyesh312/RetailIQ"
+        },
+        internshiphunter: {
+            title: "Internship Hunter",
+            year: "2026",
+            tech: ["n8n", "Telegram Bot API", "Schedule Trigger", "HTTP Request Node", "Workflow Automation"],
+            challenge: "Manually searching for India-focused internships and entry-level jobs every day across multiple platforms is time-consuming and easy to miss. Needed an automated, zero-maintenance solution that surfaces relevant opportunities proactively.",
+            solution: "Designed and deployed an n8n workflow that runs on a daily schedule trigger at 9 AM IST. The workflow fetches internship and job listings from relevant sources using HTTP Request nodes, filters results for India-based roles, formats the output into clean Telegram messages, and pushes them directly to a personal Telegram bot — delivering a daily digest without any manual effort.",
+            link: "https://github.com/Bhagyesh312/Internship_hunter"
         }
     };
 
