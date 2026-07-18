@@ -14,20 +14,40 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Build outputs
 dist/
 build/
 .cache/
+.parcel-cache/
 
 # Environment & secrets
 .env
 .env.local
 .env.*.local
+*.pem
+*.key
 
 # Logs
 *.log
 .logs/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
 
 # AI / Agent tooling
 .gemini/
@@ -39,3 +59,5 @@ build/
 # Temporary files
 *.tmp
 *.temp
+*.bak
+*.orig

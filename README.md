@@ -2,7 +2,7 @@
 
 **Live:** [https://portfolio020bs.netlify.app/](https://portfolio020bs.netlify.app/)
 
-Personal portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI & ML) student at Adani University, Ahmedabad. Built to showcase projects, internships, skills, and experience in AI/ML engineering and full-stack development.
+Personal portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI & ML) student at Adani University, Ahmedabad. Built to showcase projects, internships, skills, and experience across AI/ML engineering, full-stack development, data analysis, and workflow automation.
 
 ---
 
@@ -10,11 +10,11 @@ Personal portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI & ML) student at Adani
 
 - **Dark / Light mode** — persisted via localStorage
 - **Animated hero** — particle canvas background + Lottie animation
-- **Typing effect** — rotating role titles in the hero
-- **Filterable project gallery** — filter by Web, AI/ML, IoT, NLP
+- **Typing effect** — rotating role titles (AI/ML, Full-Stack, Data Analyst, IoT, Frontend)
+- **Filterable project gallery** — filter by All, Web, AI/ML, IoT, NLP, Data, Automation
 - **Project case study modals** — challenge, solution, tech stack, GitHub + Live Demo links
 - **Internship section** — CodSoft & CovalentX Technologies with certificate and repo links
-- **Certifications grid** — 6 verified certifications with verify links
+- **Certifications grid** — 7 verified certifications with verify links
 - **Resume preview modal** — inline PDF viewer + download
 - **Contact form** — powered by Formspree
 - **Scroll animations** — AOS (Animate On Scroll) + custom Intersection Observer
@@ -33,6 +33,9 @@ Personal portfolio of **Bhagyesh Shah**, a B.Tech CSE (AI & ML) student at Adani
 | BookSwap-HUB | Web | Flask, PostgreSQL, HTML5, CSS3 |
 | Hand Gesture Recognition | AI/ML | Python, MediaPipe, OpenCV, Random Forest |
 | Cat vs Dog Classifier | AI/ML | Python, SVM, HOG, OpenCV, Scikit-learn |
+| NIDS | AI/ML | Python, Scikit-learn, Pandas, Jupyter |
+| RetailIQ | Data Analysis | Python, Pandas, Matplotlib, Seaborn, Jupyter |
+| Internship Hunter | Automation | n8n, Telegram Bot API, Schedule Trigger |
 | Human Following Car Robot | IoT | Arduino, Ultrasonic Sensor, IR Sensors |
 
 ---
